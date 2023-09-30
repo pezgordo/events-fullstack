@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica", sans-serif;
+  font-size: 22px;
+  color: #fff;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(44, 81, 117);
+}
+
+/* Center the header text */
+h1 {
+  text-align: center;
+}
+
+/* Add margin to the top and bottom of the header */
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Add some shadow to the header */
+h1 {
+  text-shadow: 4px 4px 8px rgb(2, 6, 19);
+}
+
+h3 {
+  font-family: "Helvetica", sans-serif;
+  font-size: 28px;
+  color: #fff;
+}
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #060626;
+  font-family: "Helvetica", sans-serif;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.255);
+  /* Add more styles as needed */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 0.5rem;
+}
+
+.App-header {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.image-gallery {
+  overflow: hidden; /* Hide overflow to create a "viewport" for the images */
+  white-space: nowrap; /* Prevent images from wrapping to the next line */
+  width: 100%; /* Adjust as needed */
+}
+
+.image-gallery img {
+  display: inline-block;
+  max-width: 100%; /* Make sure images don't exceed the width of the container */
+  transition: transform 1s ease-in-out; /* Add a smooth transition effect */
+}
+
+section {
+  width: 100%;
+  max-width: 420px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  padding-bottom: 1rem;
+}
+
+a,
+a:visited {
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"],
+button,
+textarea {
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+label,
+button {
+  margin-top: 1rem;
+}
+
+button {
+  padding: 0.5rem;
+}
+
+ul {
+  display: flex;
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+li a {
+  text-decoration: none; /* Remove underline from the link */
+  color: #333; /* Set link color */
+}
+
+.ul2 {
+  display: block;
+  align-items: center;
+  list-style: none; /* Remove default list styling */
+  padding: none; /* Remove default padding */
+}
+
+.ul2 li {
+  /* Add styles for li elements inside ul2 */
+  margin-bottom: 20px;
+  display: flex;
+  margin-left: 5px;
+
+  border: 3px solid #ffffff14;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
