@@ -1,0 +1,39 @@
+
+///PRUEBAS DE SERVIDOS
+
+// Obtener Todos
+GET http://localhost:3500/users
+
+###
+
+// Obtener Uno
+GET http://localhost:3500/users/6514c5500dadbe641271c576
+
+###
+// Ingresar Usuario
+POST http://localhost:3500/users
+Content-Type: application/json
+
+{
+    "user": "1", 
+    "pwd": "2"
+}
+
+###
+
+// Borrar un usuario
+DELETE http://localhost:3500/users/6514de7f16077ff9f1603750
+
+###
+// Borrar TODOS los usuarios
+DELETE http://localhost:3500/users/
+
+###
+
+// Editar user
+PATCH http://localhost:3500/users/6514caf55eef9559f35e3c2b
+Content-Type: application/json
+
+{
+    "user": "New Name"
+}

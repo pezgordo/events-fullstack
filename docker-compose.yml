@@ -1,0 +1,38 @@
+version: '3'
+services:
+  backend:
+    container_name: backend_container
+    image: pezgord8/custom-backend-image:latest
+    ports:
+      - "3500:3500"
+    depends_on:
+      - mongodb
+    environment:
+      - DATABASE_URL=mongodb://mongodb:27017
+    networks:
+      - mynetwork
+
+  frontend:
+    container_name: frontend_container
+    image: pezgord8/custom-frontend-image:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - mynetwork
+
+  mongodb:
+    container_name: mongodb_container
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - mynetwork
+
+volumes:
+  mongo_data:
+
+
+networks:
+  mynetwork:
